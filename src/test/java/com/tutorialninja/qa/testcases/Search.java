@@ -30,7 +30,7 @@ public class Search extends Base {
     public void verifySearchWithInvalidProduct(){
         driver.findElement(By.cssSelector("input[placeholder='Search']")).sendKeys("Dell");
         driver.findElement(By.cssSelector(".fa.fa-search")).click();
-        String actualSearchMessage =  driver.findElement(By.cssSelector("body > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > p:nth-child(7)")).getText();
+        String actualSearchMessage =  driver.findElement(By.cssSelector("//div[@id='content']/h2/following-sibling::p")).getText();
         Assert.assertEquals(actualSearchMessage,"There is no product that matches the search criteria.","No product is displayed in search results");
     }
 }
