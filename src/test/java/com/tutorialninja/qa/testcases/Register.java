@@ -15,10 +15,13 @@ import java.time.Duration;
 public class Register extends Base {
 
     WebDriver driver;
+    public Register(){
+        super();
+    }
 
     @BeforeMethod
     public void setUp(){
-        driver = initializeBrowserAndOpenApplicationURL("chrome");
+        driver = initializeBrowserAndOpenApplicationURL(prop.getProperty("browser"));
         driver.findElement(By.cssSelector("a[title='My Account'] ")).click();
         driver.findElement(By.linkText("Register")).click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -30,48 +33,30 @@ public class Register extends Base {
     }
     @Test
     public void verifyRegisteringAnAccountWithMandatoryFields(){
-        WebElement first_name = driver.findElement(By.cssSelector("#input-firstname"));
-        first_name.sendKeys("xxx");
-        WebElement last_name = driver.findElement(By.cssSelector("#input-lastname"));
-        last_name.sendKeys("yyy");
-
-        WebElement email_Id = driver.findElement(By.cssSelector("#input-email"));
-        email_Id.sendKeys(Utilities.generateEmailWithTimeStamp());
-        WebElement telephone_no = driver.findElement(By.cssSelector("#input-telephone"));
-        telephone_no.sendKeys("3439893834");
-        WebElement password = driver.findElement(By.cssSelector("#input-password"));
-        password.sendKeys("12345");
-        WebElement confirm_password = driver.findElement(By.cssSelector("#input-confirm"));
-        confirm_password.sendKeys("12345");
-        WebElement check_privacy_notice  = driver.findElement(By.cssSelector("input[value='1'][name='agree']"));
-        check_privacy_notice.click();
-        WebElement continue_button = driver.findElement(By.cssSelector("input[value='Continue']"));
-        continue_button.click();
+        driver.findElement(By.cssSelector("#input-firstname")).sendKeys("xxx");
+        driver.findElement(By.cssSelector("#input-lastname")).sendKeys("yyy");
+        driver.findElement(By.cssSelector("#input-email")).sendKeys(Utilities.generateEmailWithTimeStamp());
+        driver.findElement(By.cssSelector("#input-telephone")).sendKeys("3439893834");
+        driver.findElement(By.cssSelector("#input-password")).sendKeys(prop.getProperty("validPassword"));
+        driver.findElement(By.cssSelector("#input-confirm")).sendKeys(prop.getProperty("validPassword"));
+        driver.findElement(By.cssSelector("input[value='1'][name='agree']")).click();
+        driver.findElement(By.cssSelector("input[value='Continue']")).click();
 
         WebElement logoutOption = driver.findElement(By.linkText("Logout"));
         Assert.assertTrue(logoutOption.isDisplayed());
 
         WebElement successMessage = driver.findElement(By.cssSelector("div[id='content'] h1"));
-        String actualHeading = successMessage.getText();
         successMessage.isDisplayed();
 
-        String expectedSuccessHeading = "Your Account Has Been Created!";
-        Assert.assertEquals(actualHeading,expectedSuccessHeading);
+        Assert.assertEquals(successMessage.getText(),dataProp.getProperty("expectedSuccessHeading"));
 
-        String actualURL  = driver.getCurrentUrl();
-        String expectedURL = "https://tutorialsninja.com/demo/index.php?route=account/success";
-        Assert.assertEquals(actualURL,expectedURL);
+        Assert.assertEquals(driver.getCurrentUrl(),dataProp.getProperty("registerSuccessURL"));
 
-        WebElement contact_us = driver.findElement(By.linkText("Contact Us"));
+        driver.findElement(By.linkText("Contact Us")).isDisplayed();
 
-        Assert.assertTrue(contact_us.isDisplayed());
+        driver.findElement(By.cssSelector(".btn.btn-primary")).click();
 
-        WebElement register_continue_button = driver.findElement(By.cssSelector(".btn.btn-primary"));
-        register_continue_button.click();
-
-        String actual_accountPageTitle = driver.getTitle();
-        String expected_accountPageTitle = "My Account";
-        Assert.assertEquals(actual_accountPageTitle,expected_accountPageTitle);
+        Assert.assertEquals(driver.getTitle(),dataProp.getProperty("expected_accountPageTitle"));
 
         driver.findElement(By.linkText("Subscribe / unsubscribe to newsletter")).click();
         Boolean noRadioButtonState = driver.findElement(By.cssSelector("input[value='0']")).isSelected();
@@ -81,23 +66,15 @@ public class Register extends Base {
     }
     @Test
     public void verifyRegisteringAccountWithExistingEmailId(){
-        WebElement first_name = driver.findElement(By.cssSelector("#input-firstname"));
-        first_name.sendKeys("xxx");
-        WebElement last_name = driver.findElement(By.cssSelector("#input-lastname"));
-        last_name.sendKeys("yyy");
+        driver.findElement(By.cssSelector("#input-firstname")).sendKeys("xxx");
+        driver.findElement(By.cssSelector("#input-lastname")).sendKeys("yyy");
 
-        WebElement email_Id = driver.findElement(By.cssSelector("#input-email"));
-        email_Id.sendKeys("xxx.yyy@gmail.com");
-        WebElement telephone_no = driver.findElement(By.cssSelector("#input-telephone"));
-        telephone_no.sendKeys("3439893834");
-        WebElement password = driver.findElement(By.cssSelector("#input-password"));
-        password.sendKeys("12345");
-        WebElement confirm_password = driver.findElement(By.cssSelector("#input-confirm"));
-        confirm_password.sendKeys("12345");
-        WebElement check_privacy_notice  = driver.findElement(By.cssSelector("input[value='1'][name='agree']"));
-        check_privacy_notice.click();
-        WebElement continue_button = driver.findElement(By.cssSelector("input[value='Continue']"));
-        continue_button.click();
+        driver.findElement(By.cssSelector("#input-email")).sendKeys(prop.getProperty("validEmail"));
+        driver.findElement(By.cssSelector("#input-telephone")).sendKeys("3439893834");
+        driver.findElement(By.cssSelector("#input-password")).sendKeys(prop.getProperty("validPassword"));
+        driver.findElement(By.cssSelector("#input-confirm")).sendKeys(prop.getProperty("validPassword"));
+        driver.findElement(By.cssSelector("input[value='1'][name='agree']")).click();
+        driver.findElement(By.cssSelector("input[value='Continue']")).click();
 
         String actualExistingEmailIdMsg = driver.findElement(By.cssSelector(".alert.alert-danger.alert-dismissible")).getText();
         Assert.assertTrue(actualExistingEmailIdMsg.contains("Warning: E-Mail Address is already registered!"),"Warning message is not same as expected");

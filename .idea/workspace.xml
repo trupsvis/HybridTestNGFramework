@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02274e47-82b4-49dd-8cf8-506baccc870d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/utils/Utilities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/base/Base.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Register.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Search.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/config/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/testdata/testdata.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/utils/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/utils/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/base/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/base/Base.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,18 +50,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="TestNG.Search.verifySearchWithInvalidProduct">
+}</component>
+  <component name="RunManager">
     <configuration name="Login" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HybridTestNGFramework" />
       <shortenClasspath name="NONE" />
@@ -92,52 +95,84 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Register" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Login.verifyLoginWithInValidCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HybridTestNGFramework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.tutorialninja.qa.testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.tutorialninja.qa.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.Register" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.Login" />
+      <option name="METHOD_NAME" value="verifyLoginWithInValidCredentials" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Register.verifyRegisteringAccountWithExistingEmailId" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RunWithReports" type="TestNG" temporary="true">
       <module name="HybridTestNGFramework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.tutorialninja.qa.testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.tutorialninja.qa.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.Register" />
-      <option name="METHOD_NAME" value="verifyRegisteringAccountWithExistingEmailId" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.Login" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/test-output" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
-      <listeners />
+      <listeners>
+        <listener class="org.testng.reporters.EmailableReporter" />
+      </listeners>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Search" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HybridTestNGFramework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.tutorialninja.qa.testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.tutorialninja.qa.testcases" />
       <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.Search" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/test-output" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -162,20 +197,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="TestNG">
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="TestNG.Register" />
-      <item itemvalue="TestNG.Register.verifyRegisteringAccountWithExistingEmailId" />
+      <item itemvalue="TestNG.Login.verifyLoginWithInValidCredentials" />
+      <item itemvalue="TestNG.RunWithReports" />
       <item itemvalue="TestNG.Search" />
       <item itemvalue="TestNG.Search.verifySearchWithInvalidProduct" />
       <item itemvalue="TestNG.Login" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Search.verifySearchWithInvalidProduct" />
         <item itemvalue="TestNG.Search" />
-        <item itemvalue="TestNG.Register" />
         <item itemvalue="TestNG.Login" />
-        <item itemvalue="TestNG.Register.verifyRegisteringAccountWithExistingEmailId" />
+        <item itemvalue="TestNG.RunWithReports" />
+        <item itemvalue="TestNG.Login.verifyLoginWithInValidCredentials" />
+        <item itemvalue="TestNG.Search.verifySearchWithInvalidProduct" />
       </list>
     </recent_temporary>
   </component>

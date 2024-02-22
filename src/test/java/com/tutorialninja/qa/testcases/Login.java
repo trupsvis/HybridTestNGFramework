@@ -15,9 +15,13 @@ import java.time.Duration;
 public class Login extends Base {
 
     WebDriver driver;
+    public Login(){
+        super();
+    }
+
     @BeforeMethod
     public void setUp(){
-        driver = initializeBrowserAndOpenApplicationURL("chrome");
+        driver = initializeBrowserAndOpenApplicationURL(prop.getProperty("browser"));
         driver.findElement(By.cssSelector("a[title='My Account'] ")).click();
         driver.findElement(By.linkText("Login")).click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -29,8 +33,8 @@ public class Login extends Base {
     }
     @Test
     public void verifyLoginWithValidCredentials(){
-        driver.findElement(By.cssSelector("#input-email")).sendKeys("xxx.yyy@gmail.com");
-        driver.findElement(By.cssSelector("#input-password")).sendKeys("12345");
+        driver.findElement(By.cssSelector("#input-email")).sendKeys(prop.getProperty("validEmail"));
+        driver.findElement(By.cssSelector("#input-password")).sendKeys(prop.getProperty("validPassword"));
         driver.findElement(By.cssSelector("input[value='Login']")).click();
 
         Assert.assertTrue(driver.findElement(By.linkText("Edit your account information")).isDisplayed());
@@ -40,27 +44,24 @@ public class Login extends Base {
     }
     @Test
     public void verifyLoginWithInValidCredentials(){
-        driver.findElement(By.cssSelector("#input-email")).sendKeys("xxx123@gmail.com");
-        driver.findElement(By.cssSelector("#input-password")).sendKeys("12345");
+        driver.findElement(By.cssSelector("#input-email")).sendKeys(dataProp.getProperty("invalidUsername"));
+        driver.findElement(By.cssSelector("#input-password")).sendKeys(dataProp.getProperty("invalidPassword"));
         driver.findElement(By.cssSelector("input[value='Login']")).click();
 
         String actualWarningMsg = driver.findElement(By.cssSelector(".alert.alert-danger.alert-dismissible")).getText();
         System.out.println(actualWarningMsg);
-        String expectedWarningMsg = "Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.";
-        Assert.assertTrue(expectedWarningMsg.equals(actualWarningMsg),"Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.");
-    }
-
-    @Test
-    public void verifyLoginWithInValidEmailAndValidPassword(){
-        driver.findElement(By.cssSelector("#input-email")).sendKeys(Utilities.generateEmailWithTimeStamp());
-        driver.findElement(By.cssSelector("#input-password")).sendKeys("12345");
-        driver.findElement(By.cssSelector("input[value='Login']")).click();
-
-        String actualWarningMsg = driver.findElement(By.cssSelector(".alert.alert-danger.alert-dismissible")).getText();
-        String expectedWarningMsg = "Warning: No match for E-Mail Address and/or Password.";
+        String expectedWarningMsg = dataProp.getProperty("emailPasswordWarning");
         Assert.assertTrue(expectedWarningMsg.equals(actualWarningMsg),"Warning: No match for E-Mail Address and/or Password.");
     }
 
+    @Test
+    public void verifyLoginWithValidEmailAndInValidPassword(){
+        driver.findElement(By.cssSelector("#input-email")).sendKeys(Utilities.generateEmailWithTimeStamp());
+        driver.findElement(By.cssSelector("#input-password")).sendKeys(dataProp.getProperty("invalidPassword"));
+        driver.findElement(By.cssSelector("input[value='Login']")).click();
 
-
+        String actualWarningMsg = driver.findElement(By.cssSelector(".alert.alert-danger.alert-dismissible")).getText();
+        String expectedWarningMsg = dataProp.getProperty("emailPasswordWarning");
+        Assert.assertTrue(expectedWarningMsg.equals(actualWarningMsg),"Warning: No match for E-Mail Address and/or Password.");
+    }
 }

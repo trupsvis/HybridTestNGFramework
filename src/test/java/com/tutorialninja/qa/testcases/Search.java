@@ -10,9 +10,13 @@ import org.testng.annotations.Test;
 
 public class Search extends Base {
     WebDriver driver;
+
+    public Search(){
+        super();
+    }
     @BeforeMethod
     public void setUp() {
-        driver = initializeBrowserAndOpenApplicationURL("chrome");
+        driver = initializeBrowserAndOpenApplicationURL(prop.getProperty("browser"));
     }
 
     @AfterMethod
@@ -23,14 +27,14 @@ public class Search extends Base {
     public void verifySearchWithValidProduct(){
         driver.findElement(By.cssSelector("input[placeholder='Search']")).sendKeys("HP");
         driver.findElement(By.cssSelector(".fa.fa-search")).click();
-        Assert.assertTrue(driver.findElement(By.linkText("HP LP3065")).isDisplayed(),"Valid product is displayed in search result");
+        Assert.assertTrue(driver.findElement(By.linkText("HP LP3065")).isDisplayed(),dataProp.getProperty("searchValidProductResult"));
     }
 
     @Test
     public void verifySearchWithInvalidProduct(){
         driver.findElement(By.cssSelector("input[placeholder='Search']")).sendKeys("Dell");
         driver.findElement(By.cssSelector(".fa.fa-search")).click();
-        String actualSearchMessage =  driver.findElement(By.cssSelector("//div[@id='content']/h2/following-sibling::p")).getText();
-        Assert.assertEquals(actualSearchMessage,"There is no product that matches the search criteria.","No product is displayed in search results");
+        String actualSearchMessage =  driver.findElement(By.cssSelector("body > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > p:nth-child(7)")).getText();
+        Assert.assertEquals(actualSearchMessage,dataProp.getProperty("searchNoProductResult"),"No product is displayed in search results");
     }
 }
