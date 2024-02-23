@@ -41,19 +41,15 @@ public class Register extends Base {
         driver.findElement(By.cssSelector("#input-confirm")).sendKeys(prop.getProperty("validPassword"));
         driver.findElement(By.cssSelector("input[value='1'][name='agree']")).click();
         driver.findElement(By.cssSelector("input[value='Continue']")).click();
-
-        WebElement logoutOption = driver.findElement(By.linkText("Logout"));
-        Assert.assertTrue(logoutOption.isDisplayed());
+        driver.findElement(By.linkText("Logout")).isDisplayed();
 
         WebElement successMessage = driver.findElement(By.cssSelector("div[id='content'] h1"));
         successMessage.isDisplayed();
-
         Assert.assertEquals(successMessage.getText(),dataProp.getProperty("expectedSuccessHeading"));
 
         Assert.assertEquals(driver.getCurrentUrl(),dataProp.getProperty("registerSuccessURL"));
 
         driver.findElement(By.linkText("Contact Us")).isDisplayed();
-
         driver.findElement(By.cssSelector(".btn.btn-primary")).click();
 
         Assert.assertEquals(driver.getTitle(),dataProp.getProperty("expected_accountPageTitle"));

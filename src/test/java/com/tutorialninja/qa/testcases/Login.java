@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -31,6 +32,19 @@ public class Login extends Base {
     public void tearDown(){
         driver.quit();
     }
+
+    @DataProvider(name="accessTestData")
+    public Object[][] testDataSupplier(){
+        Object[][] data = {{"xxx.yyy@gmail.com","12345"},
+                {"xxx.yyy123@gmail.com","12345"}};
+        return data;
+    }
+    @DataProvider(name="accessTestDataFromExcel")
+    public Object[][] testDataSupplierFromExcel(){
+        Object[][] data = Utilities.getTestDataFromExcel("Login");
+        return data;
+    }
+
     @Test
     public void verifyLoginWithValidCredentials(){
         driver.findElement(By.cssSelector("#input-email")).sendKeys(prop.getProperty("validEmail"));
@@ -42,6 +56,21 @@ public class Login extends Base {
         Assert.assertTrue(driver.findElement(By.linkText("Modify your address book entries")).isDisplayed());
         Assert.assertTrue(driver.findElement(By.linkText("Modify your wish list")).isDisplayed());
     }
+
+    @Test(dataProvider = "accessTestData")
+    public void verifyLoginWithMultipleUsersUsingDataProvider(String email, String password){
+        driver.findElement(By.id("input-email")).sendKeys(email);
+        driver.findElement(By.id("input-password")).sendKeys(password);
+        driver.findElement(By.cssSelector("input[value='Login']")).click();
+    }
+
+    @Test(dataProvider = "accessTestDataFromExcel")
+    public void verifyLoginWithMultipleUsersUsingDataProviderExcel(String email, String password){
+        driver.findElement(By.id("input-email")).sendKeys(email);
+        driver.findElement(By.id("input-password")).sendKeys(password);
+        driver.findElement(By.cssSelector("input[value='Login']")).click();
+    }
+
     @Test
     public void verifyLoginWithInValidCredentials(){
         driver.findElement(By.cssSelector("#input-email")).sendKeys(dataProp.getProperty("invalidUsername"));
@@ -49,7 +78,6 @@ public class Login extends Base {
         driver.findElement(By.cssSelector("input[value='Login']")).click();
 
         String actualWarningMsg = driver.findElement(By.cssSelector(".alert.alert-danger.alert-dismissible")).getText();
-        System.out.println(actualWarningMsg);
         String expectedWarningMsg = dataProp.getProperty("emailPasswordWarning");
         Assert.assertTrue(expectedWarningMsg.equals(actualWarningMsg),"Warning: No match for E-Mail Address and/or Password.");
     }

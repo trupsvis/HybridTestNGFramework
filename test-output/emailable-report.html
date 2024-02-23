@@ -25,18 +25,142 @@ td,th {border:1px solid #009;padding:.25em .5em}
 <body>
 <table cellspacing="0" cellpadding="0" class="testOverview">
 <tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">HybridTestNGFramework</a></td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi">0</td><td class="numi">13.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">HybridTestNGFramework</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi_attn">1</td><td class="numi">7.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr id="t1"><th colspan="5">HybridTestNGFramework &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="3">com.tutorialninja.qa.testcases.Login</td><td><a href="#m1"><b>verifyLoginWithInValidCredentials</b>  </a></td><td class="numi">1</td><td>1708340364101</td><td class="numi">499</td></tr><tr class="passedodd"><td><a href="#m2"><b>verifyLoginWithValidCredentials</b>  </a></td><td class="numi">1</td><td>1708340371179</td><td class="numi">525</td></tr><tr class="passedodd"><td><a href="#m3"><b>verifyLoginWithInValidEmailAndValidPassword</b>  </a></td><td class="numi">1</td><td>1708340367578</td><td class="numi">382</td></tr>
+<tr id="t1"><th colspan="5">HybridTestNGFramework &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="3">com.tutorialninja.qa.testcases.Login</td><td><a href="#m1"><b>setUp</b>  </a></td><td class="numi">1</td><td>1708583661145</td><td class="numi">7634</td></tr><tr class="failedodd"><td><a href="#m2"><b>setUp</b>  </a></td><td class="numi">1</td><td>1708583661145</td><td class="numi">7634</td></tr><tr class="failedodd"><td><a href="#m3"><b>setUp</b>  </a></td><td class="numi">1</td><td>1708583661145</td><td class="numi">7634</td></tr>
+<tr><th colspan="5">HybridTestNGFramework &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.tutorialninja.qa.testcases.Login</td><td><a href="#m4"><b>verifyLoginWithMultipleUsersUsingDataProvider</b>  </a></td><td class="numi">1</td><td>1708583668789</td><td class="numi">0</td></tr>
+<tr><th colspan="5">HybridTestNGFramework &#8212; skipped (configuration methods)</th></tr>
+<tr class="skippedodd"><td rowspan="6">com.tutorialninja.qa.testcases.Login</td><td><a href="#m5"><b>tearDown</b>  </a></td><td class="numi">3</td><td>1708583668788</td><td class="numi">5</td></tr><tr class="skippedodd"><td><a href="#m6"><b>tearDown</b>  </a></td><td class="numi">3</td><td>1708583668788</td><td class="numi">5</td></tr><tr class="skippedodd"><td><a href="#m7"><b>setUp</b>  </a></td><td class="numi">2</td><td>1708583668791</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m8"><b>tearDown</b>  </a></td><td class="numi">3</td><td>1708583668788</td><td class="numi">5</td></tr><tr class="skippedodd"><td><a href="#m9"><b>setUp</b>  </a></td><td class="numi">2</td><td>1708583668791</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m10"><b>setUp</b>  </a></td><td class="numi">2</td><td>1708583668791</td><td class="numi">1</td></tr>
+<tr><th colspan="5">HybridTestNGFramework &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="3">com.tutorialninja.qa.testcases.Login</td><td><a href="#m11"><b>verifyLoginWithInValidCredentials</b>  </a></td><td class="numi">1</td><td>1708583668787</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m12"><b>verifyLoginWithValidEmailAndInValidPassword</b>  </a></td><td class="numi">1</td><td>1708583668792</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m13"><b>verifyLoginWithValidCredentials</b>  </a></td><td class="numi">1</td><td>1708583668791</td><td class="numi">0</td></tr>
 </table>
 <h1>HybridTestNGFramework</h1>
-<h2 id="m1">com.tutorialninja.qa.testcases.Login:verifyLoginWithInValidCredentials</h2>
+<h2 id="m1">com.tutorialninja.qa.testcases.Login:setUp</h2>
+<div>
+<div class="stacktrace">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=121.0.6167.184)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.3.1&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e77e09eeca9c5167ef369292175bf42d, get {url=https://tutorialsninja.com/demo/index.php}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.184, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: /var/folders/9r/slxmlqks6gx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50619}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50619/devtoo..., se:cdpVersion: 121.0.6167.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e77e09eeca9c5167ef369292175bf42d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:305)
+	at com.tutorialninja.qa.base.Base.initializeBrowserAndOpenApplicationURL(Base.java:46)
+	at com.tutorialninja.qa.testcases.Login.setUp(Login.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 29 stack frames</div>
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">com.tutorialninja.qa.testcases.Login:verifyLoginWithValidCredentials</h2>
+<h2 id="m2">com.tutorialninja.qa.testcases.Login:verifyLoginWithMultipleUsersUsingDataProvider</h2>
+<div>
+<div class="stacktrace">org.testng.TestNGException: 
+Method public void com.tutorialninja.qa.testcases.Login.verifyLoginWithMultipleUsersUsingDataProvider(java.lang.String,java.lang.String) requires a @DataProvider named : accessTestData
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 21 stack frames</div>
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">com.tutorialninja.qa.testcases.Login:verifyLoginWithInValidEmailAndValidPassword</h2>
+<h2 id="m3">com.tutorialninja.qa.testcases.Login:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.tutorialninja.qa.testcases.Login:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.tutorialninja.qa.testcases.Login:setUp</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.tutorialninja.qa.testcases.Login:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.tutorialninja.qa.testcases.Login:setUp</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">com.tutorialninja.qa.testcases.Login:verifyLoginWithInValidCredentials</h2>
+<div>
+<div class="stacktrace">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=121.0.6167.184)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.3.1&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e77e09eeca9c5167ef369292175bf42d, get {url=https://tutorialsninja.com/demo/index.php}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.184, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: /var/folders/9r/slxmlqks6gx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50619}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50619/devtoo..., se:cdpVersion: 121.0.6167.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e77e09eeca9c5167ef369292175bf42d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:305)
+	at com.tutorialninja.qa.base.Base.initializeBrowserAndOpenApplicationURL(Base.java:46)
+	at com.tutorialninja.qa.testcases.Login.setUp(Login.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 29 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">com.tutorialninja.qa.testcases.Login:verifyLoginWithValidEmailAndInValidPassword</h2>
+<div>
+<div class="stacktrace">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=121.0.6167.184)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.3.1&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e77e09eeca9c5167ef369292175bf42d, get {url=https://tutorialsninja.com/demo/index.php}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.184, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: /var/folders/9r/slxmlqks6gx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50619}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50619/devtoo..., se:cdpVersion: 121.0.6167.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e77e09eeca9c5167ef369292175bf42d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:305)
+	at com.tutorialninja.qa.base.Base.initializeBrowserAndOpenApplicationURL(Base.java:46)
+	at com.tutorialninja.qa.testcases.Login.setUp(Login.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 29 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">com.tutorialninja.qa.testcases.Login:verifyLoginWithValidCredentials</h2>
+<div>
+<div class="stacktrace">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=121.0.6167.184)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.3.1&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e77e09eeca9c5167ef369292175bf42d, get {url=https://tutorialsninja.com/demo/index.php}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.184, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: /var/folders/9r/slxmlqks6gx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50619}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50619/devtoo..., se:cdpVersion: 121.0.6167.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e77e09eeca9c5167ef369292175bf42d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:305)
+	at com.tutorialninja.qa.base.Base.initializeBrowserAndOpenApplicationURL(Base.java:46)
+	at com.tutorialninja.qa.testcases.Login.setUp(Login.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 29 stack frames</div>
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
