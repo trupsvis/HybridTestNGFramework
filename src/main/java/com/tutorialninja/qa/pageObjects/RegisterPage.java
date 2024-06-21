@@ -54,6 +54,10 @@ public class RegisterPage {
     @FindBy(xpath="//input[@id='input-password']/following-sibling::div")
     private WebElement passwordWarning;
 
+
+
+
+
     public RegisterPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);
@@ -89,6 +93,35 @@ public class RegisterPage {
     }
 
     public void selectYesNewLetterOption(){ yesNewsletterOption.click();}
+
+    public String retriveFirstNameWarning(){
+        String firstNameWarningText = firstNameWarning.getText();
+        return firstNameWarningText;
+    }
+
+    public String retriveLastNameWarning(){
+        String lastNameWarningText = lastNameWarning.getText();
+        return lastNameWarningText;
+    }
+
+    public String retriveEmailWarning(){
+        String emailWarningText = emailWarning.getText();
+        return emailWarningText;
+    }
+    public String retriveTelephoneWarning(){
+        String telephoneWarningText = telephoneWarning.getText();
+        return telephoneWarningText;
+    }
+    public String retrivePasswordWarning(){
+        String passwordWarningText = passwordWarning.getText();
+        return passwordWarningText;
+    }
+
+    public String retrivePrivacyPolicyWarning(){
+        String privacyPolicyWarningText = privacyPolicyWarning.getText();
+        return privacyPolicyWarningText;
+    }
+
 
     public AccountSuccessPage registerWithMandatoryFields(String firstNameText,String lastNameText,String emailText,String telephoneText,String passwordText) {
 
