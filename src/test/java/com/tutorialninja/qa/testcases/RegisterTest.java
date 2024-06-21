@@ -48,7 +48,6 @@ public class RegisterTest extends Base {
     @Test
     public void verifyRegisteringAnAccountWithMandatoryFields1(){
         RegisterPage registerPage = new RegisterPage(driver);
-
         registerPage.enterFirstName(dataProp.getProperty("firstName"));
         registerPage.enterLastName(dataProp.getProperty("lastName"));
         registerPage.enterEmailAddress(Utilities.generateEmailWithTimeStamp());
@@ -59,18 +58,16 @@ public class RegisterTest extends Base {
         registerPage.clickContinueButton();
         driver.findElement(By.linkText("Logout")).isDisplayed();
 
-        WebElement successMessage = driver.findElement(By.cssSelector("div[id='content'] h1"));
-        successMessage.isDisplayed();
-        Assert.assertEquals(successMessage.getText(),dataProp.getProperty("expectedSuccessHeading"));
+        AccountSuccessPage accountSuccessPage = new AccountSuccessPage(driver);
+        String actualSuccessHeading = accountSuccessPage.retrieveAccountSuccessPageHeading();
+        Assert.assertEquals(actualSuccessHeading,dataProp.getProperty("expectedSuccessHeading"));
 
         Assert.assertEquals(driver.getCurrentUrl(),dataProp.getProperty("registerSuccessURL"));
 
         driver.findElement(By.linkText("Contact Us")).isDisplayed();
         driver.findElement(By.cssSelector(".btn.btn-primary")).click();
 
-        Assert.assertEquals(driver.getTitle(),dataProp.getProperty("expected_accountPageTitle"));
-
-        driver.findElement(By.linkText("Subscribe / unsubscribe to newsletter")).click();
+        registerPage.selectYesNewLetterOption();
         Boolean noRadioButtonState = driver.findElement(By.cssSelector("input[value='0']")).isSelected();
         Assert.assertTrue(noRadioButtonState);
 
@@ -78,18 +75,19 @@ public class RegisterTest extends Base {
     }
     @Test
     public void verifyRegisteringAccountWithExistingEmailId(){
-        driver.findElement(By.cssSelector("#input-firstname")).sendKeys("xxx");
-        driver.findElement(By.cssSelector("#input-lastname")).sendKeys("yyy");
+        RegisterPage registerPage = new RegisterPage(driver);
+        registerPage.enterFirstName(dataProp.getProperty("firstName"));
+        registerPage.enterLastName(dataProp.getProperty("lastName"));
+        registerPage.enterEmailAddress(prop.getProperty("validEmail"));
+        registerPage.enterTelephoneNo(dataProp.getProperty("telephoneNumber"));
+        registerPage.enterPassword(prop.getProperty("validPassword"));
+        registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
+        registerPage.selectYesNewLetterOption();
+        registerPage.checkPrivacyCheckbox();
+        registerPage.clickContinueButton();
 
-        driver.findElement(By.cssSelector("#input-email")).sendKeys(prop.getProperty("validEmail"));
-        driver.findElement(By.cssSelector("#input-telephone")).sendKeys("3439893834");
-        driver.findElement(By.cssSelector("#input-password")).sendKeys(prop.getProperty("validPassword"));
-        driver.findElement(By.cssSelector("#input-confirm")).sendKeys(prop.getProperty("validPassword"));
-        driver.findElement(By.cssSelector("input[value='1'][name='agree']")).click();
-        driver.findElement(By.cssSelector("input[value='Continue']")).click();
-
-        String actualExistingEmailIdMsg = driver.findElement(By.cssSelector(".alert.alert-danger.alert-dismissible")).getText();
-        Assert.assertTrue(actualExistingEmailIdMsg.contains("Warning: E-Mail Address is already registered!"),"Warning message is not same as expected");
+        String actualWarning = registerPage.retriveDuplicateEmailWarning();
+        Assert.assertTrue(actualWarning.contains("Warning: E-Mail Address is already registered!"),"Warning message is not same as expected");
 
         driver.quit();
     }

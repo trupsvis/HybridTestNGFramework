@@ -35,7 +35,7 @@ public class RegisterPage {
     private WebElement yesNewsletterOption;
 
     @FindBy(xpath="//div[contains(@class,'alert-dismissible')]")
-    private WebElement duplicateEmailAddressWarning;
+    private WebElement duplicateEmailWarning;
 
     @FindBy(xpath="//div[contains(@class,'alert-dismissible')]")
     private WebElement privacyPolicyWarning;
@@ -82,6 +82,13 @@ public class RegisterPage {
     public void clickContinueButton(){
         continueButton.click();
     }
+
+    public String retriveDuplicateEmailWarning(){
+        String duplicateEmailWarningText = duplicateEmailWarning.getText();
+        return duplicateEmailWarningText;
+    }
+
+    public void selectYesNewLetterOption(){ yesNewsletterOption.click();}
 
     public AccountSuccessPage registerWithMandatoryFields(String firstNameText,String lastNameText,String emailText,String telephoneText,String passwordText) {
 

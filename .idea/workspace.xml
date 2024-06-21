@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02274e47-82b4-49dd-8cf8-506baccc870d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/pageObjects/AccountPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/pageObjects/AccountSuccessPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/pageObjects/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/pageObjects/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/pageObjects/RegisterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/pageObjects/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/pageObjects/RegisterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/testdata/testdata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/testdata/testdata.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/RegisterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/RegisterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,34 +69,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/testdata" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RegisterTest.verifyRegisteringAnAccountWithMandatoryFields1">
-    <configuration name="Login" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="HybridTestNGFramework" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tutorialninja.qa.testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.tutorialninja.qa.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.Login" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.RegisterTest.verifyRegisteringAccountWithExistingEmailId">
     <configuration name="Login.verifyLoginWithValidCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HybridTestNGFramework" />
       <shortenClasspath name="NONE" />
@@ -117,6 +84,34 @@
       <option name="PACKAGE_NAME" value="com.tutorialninja.qa.testcases" />
       <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.Login" />
       <option name="METHOD_NAME" value="verifyLoginWithValidCredentials" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterTest.verifyRegisteringAccountWithExistingEmailId" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="HybridTestNGFramework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tutorialninja.qa.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.tutorialninja.qa.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.RegisterTest" />
+      <option name="METHOD_NAME" value="verifyRegisteringAccountWithExistingEmailId" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="PARAMETERS" value="" />
@@ -236,7 +231,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.Login" />
+      <item itemvalue="TestNG.RegisterTest.verifyRegisteringAccountWithExistingEmailId" />
       <item itemvalue="TestNG.RegisterTest.verifyRegisteringAnAccountWithMandatoryFields" />
       <item itemvalue="TestNG.RegisterTest.verifyRegisteringAnAccountWithMandatoryFields1" />
       <item itemvalue="TestNG.Login.verifyLoginWithValidCredentials" />
@@ -244,11 +239,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RegisterTest.verifyRegisteringAccountWithExistingEmailId" />
         <item itemvalue="TestNG.RegisterTest.verifyRegisteringAnAccountWithMandatoryFields1" />
         <item itemvalue="TestNG.RegisterTest.verifyRegisteringAnAccountWithMandatoryFields" />
         <item itemvalue="TestNG.Login.verifyLoginWithValidCredentials" />
         <item itemvalue="TestNG.Register.verifyRegisteringAnAccountWithMandatoryFields" />
-        <item itemvalue="TestNG.Login" />
       </list>
     </recent_temporary>
   </component>
