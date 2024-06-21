@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02274e47-82b4-49dd-8cf8-506baccc870d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/testdata/projectTestData.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/pageObjects/AccountPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/pageObjects/AccountSuccessPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/pageObjects/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/pageObjects/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/pageObjects/RegisterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/utils/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/utils/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/testdata/testdata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/testdata/testdata.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/RegisterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tutorialninja/qa/testcases/Search.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +43,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2bLwQtYVSQesTp7BGPi1mxS0lXl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -48,113 +54,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/vishalkirdat/IdeaProjects/HybridTestNGFramework/src/main/java/com/tutorialninja/qa/testdata",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vishalkirdat/IdeaProjects/HybridTestNGFramework/src/main/java/com/tutorialninja/qa/testdata&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/tutorialninja/qa/testdata" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Login.verifyLoginWithMultipleUsersUsingDataProviderExcel">
-    <configuration name="Login.verifyLoginWithInValidCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="HybridTestNGFramework" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tutorialninja.qa.testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.tutorialninja.qa.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.Login" />
-      <option name="METHOD_NAME" value="verifyLoginWithInValidCredentials" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Login.verifyLoginWithMultipleUsersUsingDataProvider" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="HybridTestNGFramework" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tutorialninja.qa.testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.tutorialninja.qa.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.Login" />
-      <option name="METHOD_NAME" value="verifyLoginWithMultipleUsersUsingDataProvider" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Login.verifyLoginWithMultipleUsersUsingDataProviderExcel" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="HybridTestNGFramework" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tutorialninja.qa.testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.tutorialninja.qa.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.Login" />
-      <option name="METHOD_NAME" value="verifyLoginWithMultipleUsersUsingDataProviderExcel" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RunWithReports" type="TestNG" temporary="true">
+  <component name="RunManager" selected="TestNG.RegisterTest.verifyRegisteringAnAccountWithMandatoryFields1">
+    <configuration name="Login" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HybridTestNGFramework" />
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
@@ -170,20 +92,18 @@
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/test-output" />
+      <option name="OUTPUT_DIRECTORY" value="" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
       </option>
       <option name="PROPERTIES_FILE" value="" />
       <properties />
-      <listeners>
-        <listener class="org.testng.reporters.EmailableReporter" />
-      </listeners>
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Search" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Login.verifyLoginWithValidCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HybridTestNGFramework" />
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
@@ -195,11 +115,96 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.tutorialninja.qa.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.Search" />
+      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.Login" />
+      <option name="METHOD_NAME" value="verifyLoginWithValidCredentials" />
       <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/test-output" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterTest.verifyRegisteringAnAccountWithMandatoryFields" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="HybridTestNGFramework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tutorialninja.qa.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.tutorialninja.qa.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.RegisterTest" />
+      <option name="METHOD_NAME" value="verifyRegisteringAnAccountWithMandatoryFields" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterTest.verifyRegisteringAnAccountWithMandatoryFields1" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="HybridTestNGFramework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tutorialninja.qa.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.tutorialninja.qa.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.RegisterTest" />
+      <option name="METHOD_NAME" value="verifyRegisteringAnAccountWithMandatoryFields1" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Register.verifyRegisteringAnAccountWithMandatoryFields" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="HybridTestNGFramework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tutorialninja.qa.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.tutorialninja.qa.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.tutorialninja.qa.testcases.Register" />
+      <option name="METHOD_NAME" value="verifyRegisteringAnAccountWithMandatoryFields" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
       </option>
@@ -231,19 +236,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.Login.verifyLoginWithMultipleUsersUsingDataProvider" />
-      <item itemvalue="TestNG.Login.verifyLoginWithMultipleUsersUsingDataProviderExcel" />
-      <item itemvalue="TestNG.Login.verifyLoginWithInValidCredentials" />
-      <item itemvalue="TestNG.RunWithReports" />
-      <item itemvalue="TestNG.Search" />
+      <item itemvalue="TestNG.Login" />
+      <item itemvalue="TestNG.RegisterTest.verifyRegisteringAnAccountWithMandatoryFields" />
+      <item itemvalue="TestNG.RegisterTest.verifyRegisteringAnAccountWithMandatoryFields1" />
+      <item itemvalue="TestNG.Login.verifyLoginWithValidCredentials" />
+      <item itemvalue="TestNG.Register.verifyRegisteringAnAccountWithMandatoryFields" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Login.verifyLoginWithMultipleUsersUsingDataProviderExcel" />
-        <item itemvalue="TestNG.Login.verifyLoginWithMultipleUsersUsingDataProvider" />
-        <item itemvalue="TestNG.RunWithReports" />
-        <item itemvalue="TestNG.Login.verifyLoginWithInValidCredentials" />
-        <item itemvalue="TestNG.Search" />
+        <item itemvalue="TestNG.RegisterTest.verifyRegisteringAnAccountWithMandatoryFields1" />
+        <item itemvalue="TestNG.RegisterTest.verifyRegisteringAnAccountWithMandatoryFields" />
+        <item itemvalue="TestNG.Login.verifyLoginWithValidCredentials" />
+        <item itemvalue="TestNG.Register.verifyRegisteringAnAccountWithMandatoryFields" />
+        <item itemvalue="TestNG.Login" />
       </list>
     </recent_temporary>
   </component>
